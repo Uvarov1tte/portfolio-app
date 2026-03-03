@@ -1,13 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import LightDarkButton from "./light-dark-button";
+import ThemeToggle from "./theme-toggle";
 
 export default function Navbar() {
-  const handleClick = () => {
-    console.log("theme switched");
-  };
-
   return (
     <div>
       <div>
@@ -17,7 +13,7 @@ export default function Navbar() {
         <Link href={"/playground"}>/playground</Link>
         <Link href={"/contact"}>/contact</Link>
       </div>
-      <LightDarkButton onClick={handleClick} />
+      <ThemeToggle />
     </div>
   );
 }
