@@ -11,12 +11,14 @@ export default function ThemeToggle() {
   };
 
   return (
-    <button onClick={handleClick}>
-      {theme === "light" ? (
-        <LuSun className="h-5 w-5 rotate-0 scale-100"></LuSun>
-      ) : (
-        <LuMoon className="h-5 w-5 rotate-0 scale-100"></LuMoon>
-      )}
+    <button onClick={handleClick} className="switch-button">
+      <IconContext.Provider value={{ className: "switch-icon" }}>
+        {theme === "light" ? (
+          <LuSun className="h-5 w-5 rotate-0 scale-100"></LuSun>
+        ) : (
+          <LuMoon className="h-5 w-5 rotate-0 scale-100"></LuMoon>
+        )}
+      </IconContext.Provider>
     </button>
   );
 }

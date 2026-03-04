@@ -1,7 +1,7 @@
 export default function Experience() {
   return (
-    <div>
-      <h1>EXPERIENCE</h1>
+    <div className="container">
+      <h1 className="mt-6">EXPERIENCE</h1>
     </div>
   );
 }
