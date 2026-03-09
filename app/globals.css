@@ -24,3 +24,14 @@
   grid-area: 1/1;
   z-index: -1;
 }
+
+.title1 {
+  text-align: end;
+  grid-area: 9/6/span 2/span 7;
+}
+
+.title2 {
+  text-align: end;
+  color: #b90404;
+  grid-area: 11/6/span 2/span 7;
+}
