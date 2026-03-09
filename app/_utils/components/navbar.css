@@ -29,7 +29,7 @@ nav {
     position: relative;
     grid-area: 1/1;
     justify-content: flex-start;
-    z-index: 2;
+    z-index: 3;
 }
 
 .burger-menu {
@@ -73,12 +73,13 @@ nav {
     margin-left: -150px;
     padding: 80px 150px 0px 150px;
     margin-top: -80px;
-    /* position: relative; */
+    position: relative;
     /* grid-area: 1/1; */
     width: 100vw;
     height: 100vh;
     top: 0;
-    z-index: 1;
+    z-index: 2;
+    overflow: hidden;
 }
 
 [data-theme="light"] .menu {
@@ -87,6 +88,10 @@ nav {
 
 [data-theme="dark"] .menu {
     background-color: #222222;
+}
+
+.nav-link{
+    z-index: 2;
 }
 
 .nav-link:nth-child(1) {
@@ -127,21 +132,32 @@ nav {
 /* clicked */
 .burger-bar.clicked:nth-child(1) {
     transform: rotate(45deg) scale(1.2375, 1) translate(4.5px, 5.5px);
-    transition: ease-out 0.5s;
+    transition: ease-out 0.2s;
 }
 
 .burger-bar.clicked:nth-child(2) {
     transform: scale(0.1);
-    transition: ease-out 0.5s;
+    transition: ease-out 0.2s;
 }
 
 .burger-bar.clicked:nth-child(3) {
     transform: rotate(135deg) scale(1.2375, 1) translate(-4.5px, 5.5px);
-    transition: ease-out 0.5s;
+    transition: ease-out 0.2s;
 }
 
 /* unclicked */
 .burger-bar.unclicked {
     transform: rotate(0) translate(0);
-    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s;
+    transition: cubic-bezier(0.25, 0.1, 0.25, 1) 0.2s;
+}
+
+canvas{
+    z-index: 1;
+    /* background-color: red; */
+}
+
+.wave{
+    width: 1500px;
+    height: 1500px;
+    transform: rotate(-135deg) translate(-525px, 0px);
 }

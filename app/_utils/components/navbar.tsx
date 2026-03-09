@@ -2,16 +2,21 @@
 
 import Link from "next/link";
 import ThemeToggle from "./theme-toggle";
-import React, { useState } from "react";
+import { useState } from "react";
 import "./navbar.css";
+import Waves from "./waves/waves";
+import { useTheme } from "next-themes";
 
 export default function Navbar() {
   // to change burger classes
   const [burger_class, setBurgerClass] = useState("burger-bar unclicked");
   const [menu_class, setMenuClass] = useState("menu hidden");
   const [isMenuClicked, setIsMenuClicked] = useState(false);
+  const [lines, setLines] = useState(false);
+  const { theme } = useTheme();
 
   // toggle burger menu change
+  let initiatedLines = false;
   const updateMenu = () => {
     if (!isMenuClicked) {
       setBurgerClass("burger-bar clicked");
@@ -21,6 +26,9 @@ export default function Navbar() {
       setMenuClass("hidden");
     }
     setIsMenuClicked(!isMenuClicked);
+    if (lines === false) {
+      setLines(true);
+    }
   };
 
   return (
@@ -60,6 +68,22 @@ export default function Navbar() {
           <p>discord</p>
           <p>or just email me at email@domain.com</p>
         </div>
+        {lines === true && (
+          <Waves
+            className="wave"
+            lineColor={theme === "light" ? "#222222" : "#f6f6f6"}
+            backgroundColor="transparent"
+            waveSpeedX={0.07}
+            waveSpeedY={0.01}
+            waveAmpX={30}
+            waveAmpY={0}
+            friction={0.72}
+            tension={0.02}
+            maxCursorMove={10}
+            xGap={40}
+            yGap={10}
+          />
+        )}
       </div>
     </div>
   );
