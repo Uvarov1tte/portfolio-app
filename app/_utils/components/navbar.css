@@ -29,7 +29,6 @@ nav {
     position: relative;
     grid-area: 1/1;
     justify-content: flex-start;
-    z-index: 3;
 }
 
 .burger-menu {
@@ -78,7 +77,6 @@ nav {
     width: 100vw;
     height: 100vh;
     top: 0;
-    z-index: 2;
     overflow: hidden;
 }
 
@@ -88,10 +86,6 @@ nav {
 
 [data-theme="dark"] .menu {
     background-color: #222222;
-}
-
-.nav-link{
-    z-index: 2;
 }
 
 .nav-link:nth-child(1) {
@@ -149,11 +143,6 @@ nav {
 .burger-bar.unclicked {
     transform: rotate(0) translate(0);
     transition: cubic-bezier(0.25, 0.1, 0.25, 1) 0.2s;
-}
-
-canvas{
-    z-index: 1;
-    /* background-color: red; */
 }
 
 .wave{

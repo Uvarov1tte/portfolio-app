@@ -11,7 +11,7 @@ export default function ThemeToggle() {
   };
 
   return (
-    <button onClick={handleClick} className="switch-button">
+    <button onClick={handleClick} className="switch-button z-110">
       <IconContext.Provider value={{ className: "switch-icon" }}>
         {theme === "light" ? (
           <LuSun className="h-5 w-5 rotate-0 scale-100"></LuSun>

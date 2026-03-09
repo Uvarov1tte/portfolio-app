@@ -25,7 +25,7 @@ export default function RootLayout({
         className={`${firaCode.className} antialiased`}
       >
         <ThemeProvider attribute="data-theme" enableSystem defaultTheme="system">
-          <div className="grid grid-cols-1 mx-[150px] min-h-screen transition-all duration-300">
+          <div className=" grid grid-cols-1 mx-[150px] min-h-screen transition-all duration-300">
             <Navbar></Navbar>
             {children}
           </div>

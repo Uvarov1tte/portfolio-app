@@ -33,7 +33,7 @@ export default function Navbar() {
 
   return (
     <div className="navigation">
-      <nav>
+      <nav className="z-110">
         <div className="burger-menu" onClick={updateMenu}>
           <div className={burger_class}></div>
           <div className={burger_class}></div>
@@ -44,24 +44,24 @@ export default function Navbar() {
       </nav>
 
       <div
-        className={`menu grid-cols-12 grid-rows-16 gap-x-[32px] ${menu_class}`}
+        className={`menu z-100 grid-cols-12 grid-rows-16 gap-x-[32px] ${menu_class}`}
       >
-        <Link onClick={updateMenu} className="nav-link" href={"/"}>
+        <Link onClick={updateMenu} className="nav-link z-110" href={"/"}>
           /home
         </Link>
-        <Link onClick={updateMenu} className="nav-link" href={"/about"}>
+        <Link onClick={updateMenu} className="nav-link z-110" href={"/about"}>
           /about
         </Link>
-        <Link onClick={updateMenu} className="nav-link" href={"/experience"}>
+        <Link onClick={updateMenu} className="nav-link z-110" href={"/experience"}>
           /experience
         </Link>
-        <Link onClick={updateMenu} className="nav-link" href={"/playground"}>
+        <Link onClick={updateMenu} className="nav-link z-110" href={"/playground"}>
           /playground
         </Link>
-        <Link onClick={updateMenu} className="nav-link" href={"/contact"}>
+        <Link onClick={updateMenu} className="nav-link z-110" href={"/contact"}>
           /contact
         </Link>
-        <div className="nav-contact">
+        <div className="nav-contact z-110">
           <p>find me at</p>
           <p>twitter</p>
           <p>bluesky</p>
@@ -70,7 +70,7 @@ export default function Navbar() {
         </div>
         {lines === true && (
           <Waves
-            className="wave"
+            className="wave z-100"
             lineColor={theme === "light" ? "#222222" : "#f6f6f6"}
             backgroundColor="transparent"
             waveSpeedX={0.07}
